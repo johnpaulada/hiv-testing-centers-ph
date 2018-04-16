@@ -1,21 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Map from './components/Map'
+import Papa from 'papaparse'
+
+const locations = require('./config/locations.json')
 
 class App extends Component {
+  state = {
+    data: {},
+  }
+
+  componentDidMount() {
+    const filelist = locations.locations
+    ;(async () => {
+      const dataPromises = filelist.map(file => {
+        return new Promise((resolve, reject) => {
+          Papa.parse(`/data/${file}`, {
+            download: true,
+            header: true,
+            complete: result => resolve(result),
+          })
+        })
+      })
+
+      const data = await Promise.all(dataPromises)
+      this.setState({ data }, () => {
+        console.log(data)
+      })
+    })()
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="section">
+        <Map />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

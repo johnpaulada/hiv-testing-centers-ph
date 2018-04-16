@@ -1,0 +1,14 @@
+{
+    "prettier.useTabs": false,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.bracketSpacing": true,
+    "prettier.tabWidth": 2,
+    "prettier.semi": false,
+    "prettier.trailingComma": "es5",
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 80,
+    "prettier.eslintIntegration": true,
+    "prettier.proseWrap": "always",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+}
