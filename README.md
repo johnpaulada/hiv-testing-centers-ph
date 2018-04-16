@@ -1,3 +1,17 @@
+# HIV Testing Centers in the Philippines
+A map of the HIV testing centers in the Philippines.
+
+## Developing
+1. Clone this repo.
+2. Run `cd hiv-testing-centers-ph`.
+3. Install Yarn.
+4. Run `yarn`.
+5. Run `yarn start`.
+
+---
+
+## Create React App Docs
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
