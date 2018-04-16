@@ -1,6 +1,8 @@
 # HIV Testing Centers in the Philippines
 A map of the HIV testing centers in the Philippines.
 
+![Made with React](https://img.shields.io/badge/Made%20With-React-blue.svg?longCache=true&style=for-the-badge)
+
 ## Developing
 1. Clone this repo.
 2. Run `cd hiv-testing-centers-ph`.
