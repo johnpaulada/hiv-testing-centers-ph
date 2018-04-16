@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import Map from './components/Map'
+import React, { Component, Fragment } from 'react'
 import Papa from 'papaparse'
+import Header from './components/Header'
+import Search from './components/Search'
 
 const locations = require('./config/locations.json')
 
@@ -31,9 +32,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="section">
-        <Map />
-      </div>
+      <Fragment>
+        <Header />
+        <Search />
+      </Fragment>
     )
   }
 }
